@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>发布页面到 IPFS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="将页面永久保存、分享。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./static/img/logo.png">
+    <link rel="icon" type="image/png" href="./static/img/logo.png">
+    <link rel="stylesheet" href="./static/css/editor.css">
+    <link rel="stylesheet" href="./static/css/easy-markdown.min.css">
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <script src="./static/js/easy-markdown.js"></script>
+    <script src="./static/js/main.js"></script>
+    <style>html{overflow:-moz-hidden-unscrollable;height:100%;}body::-webkit-scrollbar{display:none;}body {-ms-overflow-style:none;height:100%;width:calc(100vw+18px);overflow:auto;}</style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="page-header"style=" margin-left:8px;margin-right:8px; border-bottom:0;margin-bottom: 0px;margin-top:0">
+                    <h1 style="margin-bottom: 0px;margin-top: 10px;"><a style='color: #333; text-decoration:none;  'href="/" target="_blank">发布页面到 IPFS</a></br><small style="font-size: 50%;">将你的页面永久保存在互联网上。</small></h1>
+                  </div>
+                <div class="tabbable" >
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#preview-tab" data-toggle="tab"><b style='font-size:15px;'>预览</b></a>
+                        </li>
+                        <li >
+                            <a href="#editor-tab" data-toggle="tab"><b style='font-size:15px;'>编辑</b></a>
+                        </li>
+                        <li >
+                            <a data-toggle="modal" data-target="#postModal"><b style='font-size:15px;'>发布</b></a>
+                            <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="postModalLabel">发布前确认</h4>
+                                        </div>
+                                        <form method = "post" action = "/post">
+                                        <div class="modal-body">
+                                            你编辑好的文章一旦发布便永久储存在互联网上了，而且<b>不可编辑修改与删除</b>，请确认没有错别字或敏感信息哦。</br></br>
+                                            勾选 <b>确认发布</b> 后点击 【Post it !】，即可发布到 IPFS 网络！</br></br>
+                                            <span ><input type="checkbox"id="uHadRead"name="checkbox1"> 确认发布</input></span>
+                                            <textarea  style="display:none"id='wait-post'name="post">
+                                              写点什么吧 ~
+                                            </textarea>
+                                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                                            <textarea  style="display:none"id='raw'name="mark_raw"></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">算了算了</button>
+                                            <button id="uExport" style="margin-left: 10px;" type="submit" class="btn btn-success" aria-label="Left Align"disabled>Post it !
+                                            </button> </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="preview-tab">
+                            <div id="preview"style="padding-right: 15px;"></div>
+
+                        </div>
+                        <div class="tab-pane " id="editor-tab">
+<div id="editor"  style="height:500px">
+<form action="" id="editor-form">
+<textarea name="mark" id="mark" autofocus placeholder="写点什么吧~"style="height:100vh;">
+### 这垃圾网站有什么用？
+^如果你对于 IPFS & 写作没有任何兴趣，请直接点X关闭该网页。^
+---
+### 功能
+1、 实时在线编辑预览 Markdown 
+2、 渲染 Markdown 并上传到 IPFS 网络
+---
+### 使用说明
+#### 预览
+顶部有三个选项卡，依次为**预览**、**编辑**与**发布**。你现在看到的页面就是^预览^，该界面会自动将^编辑选项卡^内的内容渲染成 HTML 。
+#### 编辑
+点击顶部的编辑选项卡，该界面是一个**编辑器**。你可以在这里输入文本、MD 格式文本甚至是 HTML 源码。对了，如果你觉得不好看，可以插入css自己美化页面甚至可以插入js。
+这些都会实时刷新并呈现在**预览选项卡内**。
+你可能用得到的: [Markdown 基本语法](https://ipfs.uno/ipfs/QmaSM2eTCtJ3o6cn6XSnt9EqhwJcLw9KUriLoL3DvbV6Bu)
+#### 发布
+点击 **Post it!** 即可发布你编辑好的文本到 IPFS 网络。
+由于 IPFS 网络的特殊性，一旦发布，即不可更改，并且理论上永久储存在互联网中。
+---
+### 如何工作？
+后端使用 IPFS + Flask + Nginx，前端使用 Bootstrap + easy-markdown。
+源码开源在 [GitHub](https://github.com/SaltyLeo/Post-Pages-to-IPFS)，如果哪里用的问题，欢迎提 issues。
+---
+### 其他
+为了保证服务可持续性，发布功能每分钟仅限2次，如超出将会被封禁1分钟。请勿滥用资源。
+如果觉得还不错，不妨 [^**捐赠**^](https://ipfs.uno/ipfs/QmSXadzjW6vPvrQpq8WEx99QGvn8cHzAb9XzJwV38DjDWn) 支持下~
+</textarea>
+</form>
+</div >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style='float: right;'>
+            <p>Powered by <a href="https://tstrs.me/about">SaltyLeo</a> with Love.</p>
+          </footer>
+    </div>
+    
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script>$(document).ready(function () {
+        $("#uHadRead").click(function () {
+          $("#uExport").prop("disabled", !$("#uHadRead:checked").length);
+        });
+      });</script>
+      
+  </body>
+</html>

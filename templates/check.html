@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+	<title>发布状态查询</title>
+    <meta charset="UTF-8">
+	<meta name="description" content="检查你发布的页面是否已被各个 IPFS 网关缓存。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../static/img/logo.png">
+    <link rel="icon" type="image/png" href="../../static/img/logo.png">
+    <link rel="stylesheet" href="../../static/css/editor.css">
+    <link rel="stylesheet" href="../../static/css/easy-markdown.min.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <style>html{overflow:-moz-hidden-unscrollable;height:100%;}body::-webkit-scrollbar{width:6px;height:6px;background-color:#f5f5f5}body::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px #D3D3D3;border-radius:10px;background-color:#f5f5f5}body::-webkit-scrollbar-thumb{height:20px;border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);background-color:#555}body {-ms-overflow-style:none;height:100%;width:calc(100vw+18px);overflow:auto;}.Flag{width: 2.1em;height: 1.2em;background-repeat: no-repeat;background-size: contain;background-position: center;}</style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="page-header"style=" margin-left:8px;margin-right:8px; border-bottom:0;margin-bottom: 0px;margin-top:0">
+                    <h1 style="margin-bottom: 0px;margin-top: 10px;"><a style='color: #333; text-decoration:none;  'href="/" target="_blank">发布页面到 IPFS</a></br><small style="font-size: 50%;">将你的页面永久保存在互联网上。</small></h1>
+                  </div></br>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">发布状态检查</h3>
+                    </div>
+                    <div class="panel-body">
+                        有 ✅ 的，说明该网关已经缓存了你刚刚发布的页面，<b>点击网关名称即可访问。</b></br>有 ⚠️ 的，说明该网关在中国大陆访问困难。
+                    </div>
+                    <table class="table" >
+                        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">&#8194;🌐</th><th class="col-xs-9 col-sm-9 col-md-9 col-lg-9">网关</th><th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">缓存</th>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.io'>ipfs.io ⚠️</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.io'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.lc'>ipfs.lc</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.lc'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="JPN"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/jp.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.uno'>ipfs.uno</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.uno'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="SGP"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/sg.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='atrusti.id'>trusti.id</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='trusti.id'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='a10.via0.com'>10.via0.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='10.via0.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='agateway.originprotocol.com'>gateway.originprotocol.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='gateway.originprotocol.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='acloudflare-ipfs.com'>cloudflare-ipfs.com ⚠️</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='cloudflare-ipfs.com'>⏳</div> 
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='agateway.ipfs.io'>gateway.ipfs.io ⚠️</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='gateway.ipfs.io'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.smartsignature.io'>ipfs.smartsignature.io ⚠️</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.smartsignature.io'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.telos.miami'>ipfs.telos.miami</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.telos.miami'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.drink.cafe'>ipfs.drink.cafe</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.drink.cafe'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.fleek.co'>ipfs.fleek.co</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.fleek.co'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="SWE"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/se.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.best-practice.se'>ipfs.best-practice.se</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.best-practice.se'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="CAN"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/ca.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='agateway.temporal.cloud'>gateway.temporal.cloud</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='gateway.temporal.cloud'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.overpi.com'>ipfs.overpi.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.overpi.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='adweb.link'>dweb.link</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='dweb.link'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="DEU"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='agateway.pinata.cloud'>gateway.pinata.cloud</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='gateway.pinata.cloud'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="FRA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.sloppyta.co'>ipfs.sloppyta.co</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.sloppyta.co'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="FRA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.jeroendeneef.com'>ipfs.jeroendeneef.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.jeroendeneef.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="NLD"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/nl.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='ahardbin.com'>hardbin.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='hardbin.com'>⏳</div> 
+                            </td>
+                        </tr>                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.greyh.at'>ipfs.greyh.at</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.greyh.at'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='acf-ipfs.com'>cf-ipfs.com ⚠️</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='cf-ipfs.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.runfission.com'>ipfs.runfission.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.runfission.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.mttk.net'>ipfs.mttk.net</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.mttk.net'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="CHN"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/cn.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='ahashnews.k1ic.com'>hashnews.k1ic.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='hashnews.k1ic.com'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='agateway.ravenland.org'>gateway.ravenland.org</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='gateway.ravenland.org'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="USA"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.infura.io'>ipfs.infura.io ⚠️</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.infura.io'>⏳</div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="Flag col-xs-1 col-sm-1 col-md-1 col-lg-1" title="CHN"text-anchor="middle"  style="background-image: url(https://ipfs.uno/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/cn.svg);"></div>
+                            </td>
+                            <td>
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style='padding-left: 0px;'><a href=" " target="_blank"id='aipfs.k1ic.com'>ipfs.k1ic.com</a></div> 
+                            </td>
+                            <td>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style='padding-left: 0px;'id='ipfs.k1ic.com'>⏳</div> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                </div>
+            </div>
+            <footer style='float: right;'>
+                <p>Powered by <a href="https://tstrs.me/about">SaltyLeo</a> with Love.</p>
+              </footer>
+        </div>
+        
+    </div>
+    
+    <script src="../../static/js/jquery.min.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+      <script>
+          var obj = {
+    'ipfs.uno':'https://ipfs.uno/ipfs/',
+    'ipfs.io':'https://ipfs.io/ipfs/',
+    'gateway.ipfs.io':'https://gateway.ipfs.io/ipfs/',
+    'cloudflare-ipfs.com':'https://cloudflare-ipfs.com/ipfs/',
+    'gateway.originprotocol.com':'https://gateway.originprotocol.com/ipfs/',
+    '10.via0.com':'https://10.via0.com/ipfs/',
+    'trusti.id':'https://trusti.id/ipfs/',
+    'ipfs.smartsignature.io':'https://ipfs.smartsignature.io/ipfs/',
+    'ipfs.telos.miami':'https://ipfs.telos.miami/ipfs/',
+    'ipfs.drink.cafe':'https://ipfs.drink.cafe/ipfs/',
+    'ipfs.fleek.co':'https://ipfs.fleek.co/ipfs/',
+    'ipfs.best-practice.se':'https://ipfs.best-practice.se/ipfs/',
+    'gateway.temporal.cloud':'https://gateway.temporal.cloud/ipfs/',
+    'ipfs.overpi.com':'https://ipfs.overpi.com/ipfs/',
+    'dweb.link':'https://dweb.link/ipfs/',
+    'gateway.pinata.cloud':'https://gateway.pinata.cloud/ipfs/',
+    'ipfs.sloppyta.co':'https://ipfs.sloppyta.co/ipfs/',
+    'ipfs.jeroendeneef.com':'https://ipfs.jeroendeneef.com/ipfs/',
+    'hardbin.com':'https://hardbin.com/ipfs/',
+    'ipfs.greyh.at':'https://ipfs.greyh.at/ipfs/',
+    'cf-ipfs.com':'https://cf-ipfs.com/ipfs/',
+    'ipfs.runfission.com':'https://ipfs.runfission.com/ipfs/',
+    'ipfs.mttk.net':'https://ipfs.mttk.net/ipfs/',
+    'jacl.tech':'https://jacl.tech/ipfs/',
+    'hashnews.k1ic.com':'https://hashnews.k1ic.com/ipfs/',
+    'gateway.ravenland.org':'https://gateway.ravenland.org/ipfs/',
+    'ipfs.infura.io':'https://ipfs.infura.io/ipfs/',
+    'ipfs.k1ic.com':'https://ipfs.k1ic.com/ipfs/',
+    'ipfs.lc':'https://ipfs.lc/ipfs/'};
+  Object.keys(obj).forEach(function(key){
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+    document.getElementById("a"+key).href = obj[key]+"{{Qmhash}}";
+      if (xhr.readyState === 3){
+          document.getElementById(key).innerHTML='✅';
+          xhr.abort();
+      }
+    };
+    xhr.open('GET', obj[key]+'{{Qmhash}}', true);
+    xhr.send(null);
+      });
+      </script>
+  </body>
+</html>
