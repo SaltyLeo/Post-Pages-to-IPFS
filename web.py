@@ -97,7 +97,7 @@ def post():
             if checkbox1 == 'on':
                 allhtmls = pc(post)
                 post_down = post_2_ipfs(allhtmls)
-                return redirect("./check/%s"%str(post_down))
+                return redirect("https://post.ipfs.uno/check/%s"%str(post_down)) # 【根据你的实际地址修改】
             else:
                 return redirect("/")
         except:
