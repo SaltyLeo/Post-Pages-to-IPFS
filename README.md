@@ -39,4 +39,4 @@
 
 ### 其他
 为了保证服务可持续性，发布功能每分钟仅限2次，如超出将会被封禁1分钟。请勿滥用资源。
-如果觉得还不错，不妨 [**捐赠**](https://ipfs.uno/ipfs/QmSXadzjW6vPvrQpq8WEx99QGvn8cHzAb9XzJwV38DjDWn) 支持下~
+如果觉得还不错，不妨 [**捐赠**](https://ipfs.uno/ipfs/QmQ6pzGftyCJNYXvAVWatj1Y36TQB8ptiDaRxdE7xRmtYS) 支持下~
