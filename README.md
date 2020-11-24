@@ -22,6 +22,10 @@
 
 这些都会实时刷新并呈现在**预览选项卡内**。
 
+你可能用得到的: [Markdown 基本语法](https://ipfs.uno/ipfs/QmaSM2eTCtJ3o6cn6XSnt9EqhwJcLw9KUriLoL3DvbV6Bu)
+
+
+
 #### 发布
 发布选项卡，确认发布后点击 **Post it!** 即可发布你编辑好的文本到 IPFS 网络。
 由于 IPFS 网络的特殊性，一旦发布，即不可更改，并且理论上永久储存在互联网中。所以请确认没有错别字或敏感信息哦。
