@@ -2,9 +2,9 @@
 
 一个可以实时将 Markdown 渲染生成 Html 并上传到 IPFS 网络的 Web 服务。
 
-![home](https://photo-1252237247.cos.ap-shanghai.myqcloud.com/20201107151207.png)
+![home](https://gateway.ipfs.lc/ipfs/QmR8Xj7bD8kTq5NCfVMW13mEVRoBRiD5GG5C4BYfvMnji8)
 
-地址：https://post.ipfs.uno/
+地址：https://post2.ipfs.lc/
 
 ### 功能
 1、实时在线编辑预览 Markdown 
@@ -22,7 +22,7 @@
 
 这些都会实时刷新并呈现在**预览选项卡内**。
 
-你可能用得到的: [Markdown 基本语法](https://ipfs.uno/ipfs/QmaSM2eTCtJ3o6cn6XSnt9EqhwJcLw9KUriLoL3DvbV6Bu)
+你可能用得到的: [Markdown 基本语法](https://gateway.ipfs.lc/ipfs/QmaSM2eTCtJ3o6cn6XSnt9EqhwJcLw9KUriLoL3DvbV6Bu)
 
 
 
@@ -43,4 +43,4 @@
 
 ### 其他
 为了保证服务可持续性，发布功能每分钟仅限2次，如超出将会被封禁1分钟。请勿滥用资源。
-如果觉得还不错，不妨 [**捐赠**](https://ipfs.uno/ipfs/QmQ6pzGftyCJNYXvAVWatj1Y36TQB8ptiDaRxdE7xRmtYS) 支持下~
+如果觉得还不错，不妨 [**捐赠**](https://gateway.ipfs.lc/ipfs/QmQ6pzGftyCJNYXvAVWatj1Y36TQB8ptiDaRxdE7xRmtYS) 支持下~
