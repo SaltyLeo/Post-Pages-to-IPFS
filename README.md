@@ -2,9 +2,7 @@
 
 一个可以实时将 Markdown 渲染生成 Html 并上传到 IPFS 网络的 Web 服务。
 
-![home](https://gateway.ipfs.lc/ipfs/QmR8Xj7bD8kTq5NCfVMW13mEVRoBRiD5GG5C4BYfvMnji8)
-
-地址：https://post2.ipfs.lc/
+![图片](https://user-images.githubusercontent.com/72449367/141116469-e7badb06-4094-4774-bd9d-99d51802d03c.png)
 
 ### 功能
 1、实时在线编辑预览 Markdown 
@@ -37,10 +35,15 @@
 
 ### 安装教程
 
-【等待更新】
+```
+git clone https://github.com/SaltyLeo/Post-Pages-to-IPFS
+cd Post-Page-to-IPFS
+python3 web.py
+```
+如果不能运行，请先把报错复制到搜索引擎搜索有关的解决方法，如果还是无法解决请加入[Telegram群组](https://t.me/SaltyLeo_blog)寻求帮助。
 
 -----
 
 ### 其他
 为了保证服务可持续性，发布功能每分钟仅限2次，如超出将会被封禁1分钟。请勿滥用资源。
-如果觉得还不错，不妨 [**捐赠**](https://gateway.ipfs.lc/ipfs/QmQ6pzGftyCJNYXvAVWatj1Y36TQB8ptiDaRxdE7xRmtYS) 支持下~
+如果觉得还不错，不妨 [**捐赠**](https://ipfs.io/ipfs/QmQ6pzGftyCJNYXvAVWatj1Y36TQB8ptiDaRxdE7xRmtYS) 支持下~
